@@ -30,7 +30,7 @@ chrome_options.add_experimental_option("prefs", {
     "download.default_directory": download_dir,  # Основная папка
     "download.prompt_for_download": False,       # Отключить диалог "Сохранить как"
     "download.directory_upgrade": True,          # Разрешить загрузку в указанную папку
-    "safebrowsing.enabled": True                # Безопасный режим (опционально)
+    "safebrowsing.enabled": True                # Безопасный режим 
 })
 
 driver = webdriver.Chrome(options=chrome_options)
@@ -476,7 +476,7 @@ def send_excel_with_row_count(sender_email, sender_password, recipient_email, fi
         encoders.encode_base64(part)
         part.add_header(
             'Content-Disposition',
-            f'attachment; filename=USD_JPY_RUB_Rates',
+            f'attachment; filename=USD_JPY_RUB_Rates.xlsx',
         )
         msg.attach(part)
 
